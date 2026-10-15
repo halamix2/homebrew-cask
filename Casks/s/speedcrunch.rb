@@ -1,13 +1,10 @@
 cask "speedcrunch" do
-  version "0.12"
-  sha256 "09a881ef4e5d8ee37f90b5291544fcabeb28c63bc57e6e5eabbd748e09c975be"
+  version "1.0.0"
+  sha256 "6d7893651d8a215812e96bb28e666a62727013dcd1ade0ea61da0babbf3ed9e9"
 
-  url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg"
+  url "https://github.com/heldercorreia/speedcrunch/releases/download/v#{version}/SpeedCrunch-1.0-arm64.dmg"
   name "SpeedCrunch"
-  homepage "https://heldercorreia.bitbucket.io/speedcrunch/"
-
-  deprecate! date: "2024-10-29", because: :unmaintained
-  disable! date: "2025-10-29", because: :unmaintained
+  homepage "https://www.speedcrunch.org//"
 
   depends_on :macos
 
@@ -18,7 +15,4 @@ cask "speedcrunch" do
     "~/Library/Preferences/SpeedCrunch",
   ]
 
-  caveats do
-    requires_rosetta
-  end
 end
